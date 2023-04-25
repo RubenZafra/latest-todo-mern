@@ -7,5 +7,5 @@ module.exports = async (req, res) => {
     todo.completed = req.body.completed;
     todo.text = req.body.text; 
     await todo.save();
-    res.json()
+    res.json(todo)
 }

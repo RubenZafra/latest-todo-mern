@@ -6,7 +6,7 @@ module.exports = (req, res, next) => {
         res.status(401).send({ error: 'No token provided' });
     } else {
         const token = authHeader.split(' ')[1];
-        jwt.verify(token, process.env.APP_SECRET, (err, decoded) => {
+        jwt.verify(token, process.env.SECRET, (err, decoded) => {
             if (err){
                 res.status(403).send({ error: 'Token invalid' });
             } else {
