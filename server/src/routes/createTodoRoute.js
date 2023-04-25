@@ -1,7 +1,5 @@
 const TodoModel = require('../models/TodoModel')
 
-
-
 module.exports = async (req, res) => {
     const {text} = req.body
     const todo = new TodoModel({
